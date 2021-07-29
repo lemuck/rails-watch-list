@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="show">
+    <h1> <%= @bookmark.comment %> </h1>
+    <div class="card">
+      <%= @movie.name %>
+    </div>
+  </div>
+  <%= link_to 'Home', lists_path, class: 'btn btn-primary' %>
+</div>
+

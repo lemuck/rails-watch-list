@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="show">
+  	<h1> <%= @list.name %> </h1>
+    <div class="card">
+      <%= @list.name %>
+      <% @bookmarks.each do |bookmark| %>
+      <%= bookmark.comment %>
+      <% end %>
+      <div class="movies">
+        
+      </div>
+	  </div>
+  </div>
+  <%= link_to 'Home', lists_path, class: 'btn btn-primary' %>
+</div>
+

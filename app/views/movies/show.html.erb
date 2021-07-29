@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="index">
+
+    <h1> <%= @movie.title %> </h1>
+
+    <div class="card">
+
+      <p>
+      <%= @movie.overview %>
+      </p>
+
+      <div class="img">
+        <%= image_tag @movie.poster_url, alt:'', width: 200 %>
+      </div>
+      <p> <%= @movie.rating %> </p>
+    </div>
+  </div>
+    <%= link_to 'My lists', lists_path, class: 'btn btn-primary' %>
+    <%= link_to 'All Movies', movies_path, class: 'btn btn-primary' %>
+</div>

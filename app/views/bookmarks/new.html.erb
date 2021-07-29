@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="new">
+  	<h1>Add a bookmark</h1>
+    <div class="form">
+      <%= simple_form_for [ @list, @bookmark ] do |f| %>
+      <%= f.input :comment %>
+      <%= f.button :submit, class: 'btn btn-success' %>
+      <% end %>
+	  </div>
+  </div>
+   <%= link_to 'Home', lists_path, class: 'btn btn-primary' %>
+</div>
+
