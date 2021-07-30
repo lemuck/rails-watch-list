@@ -1,16 +1,79 @@
-<div class="container">
-  <div class="show">
-  	<h1> <%= @list.name %> </h1>
-    <div class="card">
-      <%= @list.name %>
-      <% @bookmarks.each do |bookmark| %>
-      <%= bookmark.comment %>
-      <% end %>
-      <div class="movies">
-        
-      </div>
-	  </div>
-  </div>
-  <%= link_to 'Home', lists_path, class: 'btn btn-primary' %>
+<header class='d-flex flex-row-reverse'>
+  <%= link_to 'All lists', lists_path, class: 'btn btn-primary' %>
+  <%= link_to 'New list', new_list_path, class: 'btn btn-primary' %>
+  <%= link_to 'Movies', movies_path, class: 'btn btn-primary' %>
+</header>
+
+<div class="list-banner align-middle">
+
+  <h3 class='text-white text-center'> <%= @list.name %> </h3>
 </div>
+<div class="container p-5">
+
+  <div class="list-header d-flex justify-content-between my-2 py-2">
+    <h3></h3>
+
+
+            <%= link_to 'Add movie', new_list_bookmark_path(@list) %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Add a movie
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add a movie</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%#= simple_form_for @list do |f| %>
+            <%#= f.association :movies %>
+            <%#= f.button :submit, class: 'btn btn-success' %>
+            <%# end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lists d-flex justify-content-around">
+    <% @list.movies.each do |movie| %>
+    <div class="movie-card mx-2 text-center">
+      <%= image_tag movie.poster_url, width: '200px' %>
+      <%= movie.title %>
+      <%= movie.overview %>
+      <%= movie.rating %>
+
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+
 

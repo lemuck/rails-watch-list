@@ -1,3 +1,40 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.banner {
+  width: 100%;
+  height: 40vh;
+  background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2luZW1hfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+  background-position: center;
+  background-size: cover;
+}
+
+.lists {
+ 
+}
+
+.list-card {
+  width: 150px;
+  height: 100px;
+  background-image: url('https://static.dw.com/image/15810926_303.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 3px;
+}
+
+.list-banner {
+  width: 100%;
+  height: 40vh;
+  background-image: url('https://static.dw.com/image/15810926_303.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.movie-card {
+  width: 150px;
+  height: 100px;
+  background-image: asset-url('movie.poster_url');
+  background-position: center;
+  background-size: cover;
+  border-radius: 3px;
+}

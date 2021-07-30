@@ -1,9 +1,10 @@
 <div class="container">
   <div class="new">
-  	<h1>Create my list</h1>
+  	<h1>Add a movie</h1>
     <div class="form">
-      <%= simple_form_for(@list) do |f| %>
-      <%= f.input :name %>
+      <%= simple_form_for(@movie) do |f| %>
+      <%= f.input :title %>
+      <%= f.association :movies %>
       <%= f.button :submit, class: 'btn btn-success' %>
       <% end %>
 	  </div>
